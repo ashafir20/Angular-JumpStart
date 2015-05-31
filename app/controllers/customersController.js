@@ -1,4 +1,4 @@
-function CustomersController($scope){
+angular.module('app', []).controller('CustomersController', ['$scope', function CustomersController($scope) {
     $scope.sortBy = 'name';
     $scope.reverse = false;
 
@@ -11,5 +11,5 @@ function CustomersController($scope){
     $scope.doSort = function(propName) {
         $scope.sortBy = propName;
         $scope.reverse = !$scope.reverse;
-    }
-}
+    };
+}]);
