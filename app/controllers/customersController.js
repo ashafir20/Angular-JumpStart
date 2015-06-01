@@ -61,7 +61,8 @@
             };
     }; 
     
-    
+    //inject dependencies
+    CustomersController.$inject = ['$scope'];
     
     //then plug it into angular
     

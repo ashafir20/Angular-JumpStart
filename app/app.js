@@ -1,7 +1,14 @@
-//option 1
-//var app = angular.module('app', []);
-
-//option 2
 (function() {
-    var app = angular.module('app', []);
+    
+    var app = angular.module('app', ['ngRoute']);
+    
+    app.config(function($routeProvider){
+        $routeProvider
+            .when('/', {
+                controller : 'CustomersController',
+                templateUrl : 'app/views/customers.html'
+            })
+            .otherwise({ redirectTo: '/' });
+    });
+    
 }());
